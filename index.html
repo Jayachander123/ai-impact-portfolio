@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Jayachander Reddy Kandakatla | AI Impact Portfolio</title>
+  <meta name="description" content="AI impact portfolio of Jayachander Reddy Kandakatla: responsible AI, MLOps, AI FinOps, HealthNeem, open-source AI infrastructure, research, judging, and public-sector AI literacy." />
+
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #11182f;
+      --card2: #151f3d;
+      --text: #eef3ff;
+      --muted: #b7c2dd;
+      --accent: #68e1fd;
+      --accent2: #8b5cf6;
+      --green: #35d399;
+      --gold: #fbbf24;
+      --border: rgba(255,255,255,0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(104,225,253,0.18), transparent 35%),
+        radial-gradient(circle at top right, rgba(139,92,246,0.20), transparent 35%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 84px 0 56px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--muted);
+      background: rgba(255,255,255,0.04);
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 6vw, 72px);
+      line-height: 1.05;
+      margin: 0 0 20px;
+      letter-spacing: -0.04em;
+    }
+
+    .gradient {
+      background: linear-gradient(90deg, var(--accent), var(--accent2), var(--green));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .subtitle {
+      max-width: 860px;
+      margin: 0 auto 30px;
+      color: var(--muted);
+      font-size: 20px;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+      font-weight: 650;
+    }
+
+    .btn.primary {
+      background: linear-gradient(90deg, #2563eb, #7c3aed);
+      border: none;
+    }
+
+    section {
+      padding: 44px 0;
+    }
+
+    .section-title {
+      font-size: 30px;
+      margin-bottom: 14px;
+      letter-spacing: -0.02em;
+    }
+
+    .section-lead {
+      color: var(--muted);
+      max-width: 850px;
+      margin-bottom: 24px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid.three {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid.two {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 860px) {
+      .grid.three, .grid.two {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.025));
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+    }
+
+    .metric {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .metric-label {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .tag-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    .tag {
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .highlight {
+      border-left: 4px solid var(--accent);
+      padding-left: 16px;
+      color: var(--muted);
+    }
+
+    .timeline {
+      display: grid;
+      gap: 14px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 18px;
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: rgba(255,255,255,0.035);
+    }
+
+    @media (max-width: 680px) {
+      .timeline-item {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .date {
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    footer {
+      padding: 48px 0;
+      text-align: center;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      margin-top: 40px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .small {
+      font-size: 14px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="eyebrow">Responsible AI • MLOps • AI FinOps • Health AI • Open Source</div>
+      <h1>Jayachander Reddy Kandakatla<br><span class="gradient">AI Impact Portfolio</span></h1>
+      <p class="subtitle">
+        AI/ML infrastructure and responsible AI practitioner focused on production-grade AI systems,
+        AI governance, cost-aware MLOps, open-source AI infrastructure, and AI-for-good health literacy.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn primary" href="#featured">View Featured Impact</a>
+        <a class="btn" href="#evidence">Supporting Evidence</a>
+        <a class="btn" href="https://github.com/Jayachander123">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/jayachanderreddy/">LinkedIn</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="metrics">
+      <div class="container">
+        <h2 class="section-title">Impact at a Glance</h2>
+        <p class="section-lead">
+          Publicly documented impact across AI-for-good, open-source AI infrastructure, research,
+          professional authorship, judging, standards, and technical leadership.
+        </p>
+
+        <div class="grid three">
+          <div class="card">
+            <div class="metric">450k+</div>
+            <div class="metric-label">HealthNeem views reported across public materials / internal analytics</div>
+          </div>
+          <div class="card">
+            <div class="metric">1M+</div>
+            <div class="metric-label">HealthNeem events reported by media within early months of launch</div>
+          </div>
+          <div class="card">
+            <div class="metric">4</div>
+            <div class="metric-label">Merged open-source AI infrastructure PRs across LlamaIndex, SkyPilot, and LiteLLM</div>
+          </div>
+          <div class="card">
+            <div class="metric">2</div>
+            <div class="metric-label">IEEE / peer-reviewed research publications listed in evidence</div>
+          </div>
+          <div class="card">
+            <div class="metric">10+</div>
+            <div class="metric-label">Professional AI articles / interviews across major technology and business publications</div>
+          </div>
+          <div class="card">
+            <div class="metric">Multiple</div>
+            <div class="metric-label">Judging, reviewer, IEEE, and public-sector AI service roles</div>
+          </div>
+        </div>
+
+        <p class="small">
+          Note: Metrics are provided as public impact signals. Download counts, page views, and event counts should be interpreted
+          according to the source that reports them.
+        </p>
+      </div>
+    </section>
+
+    <section id="featured">
+      <div class="container">
+        <h2 class="section-title">Featured Impact Areas</h2>
+
+        <div class="grid two">
+          <div class="card">
+            <h3>AI for Good: HealthNeem</h3>
+            <p>
+              Creator of HealthNeem, an AI-powered health-literacy platform designed to simplify and contextualize health
+              information for regional-language users, including Telugu-speaking communities.
+            </p>
+            <div class="tag-row">
+              <span class="tag">AI for Good</span>
+              <span class="tag">Health Literacy</span>
+              <span class="tag">Regional Language AI</span>
+              <span class="tag">Responsible AI</span>
+            </div>
+            <p><a href="https://healthneem.com">Visit HealthNeem</a></p>
+          </div>
+
+          <div class="card">
+            <h3>Open-Source AI Infrastructure</h3>
+            <p>
+              Merged contributions to LlamaIndex, SkyPilot, and LiteLLM focused on token cost governance,
+              GenAI reliability, cluster burn-rate observability, and model-pricing traceability.
+            </p>
+            <div class="tag-row">
+              <span class="tag">LlamaIndex</span>
+              <span class="tag">SkyPilot</span>
+              <span class="tag">LiteLLM</span>
+              <span class="tag">GenAI FinOps</span>
+            </div>
+            <p><a href="https://github.com/Jayachander123/ai-infra-open-source-contributions">Open-source contribution packet</a></p>
+          </div>
+
+          <div class="card">
+            <h3>Responsible AI and Governance Thought Leadership</h3>
+            <p>
+              Articles and interviews across VentureBeat, CIO, Entrepreneur, The AI Journal, InfoWorld, VKTR,
+              and Authority Magazine on AI governance, AI audits, AI costs, GreenOps, on-device inference, and production AI.
+            </p>
+            <div class="tag-row">
+              <span class="tag">AI Governance</span>
+              <span class="tag">AI Audits</span>
+              <span class="tag">MLOps</span>
+              <span class="tag">AI FinOps</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Research, Standards, and Professional Service</h3>
+            <p>
+              IEEE research author, IEEE Computer Society Area Coordinator, IEEE SouthEastCon TPC member,
+              reviewer/judge for AI and innovation programs, and contributor to public-sector AI literacy.
+            </p>
+            <div class="tag-row">
+              <span class="tag">IEEE</span>
+              <span class="tag">Reviewer</span>
+              <span class="tag">Standards</span>
+              <span class="tag">Public-sector AI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="healthneem">
+      <div class="container">
+        <h2 class="section-title">AI for Good: HealthNeem</h2>
+        <p class="section-lead">
+          HealthNeem applies AI to a high-impact public problem: making health information more understandable,
+          accessible, and culturally usable for regional-language communities.
+        </p>
+
+        <div class="card">
+          <p class="highlight">
+            HealthNeem is positioned as an AI-powered health-literacy platform for regional-language access,
+            using trusted-source curation, bilingual terminology handling, and user-centered health education.
+          </p>
+
+          <ul>
+            <li>AI-powered health-literacy platform for Telugu and regional-language users.</li>
+            <li>Reported hundreds of thousands of views within months of launch.</li>
+            <li>Reported over one million events in early media coverage.</li>
+            <li>Recognized with multiple MarCom Gold Awards, a Davey Silver Award, and HDM Awards Silver recognition.</li>
+            <li>Covered by Entrepreneur, New Indian Express, Eenadu, Andhra Jyothy, and EdexLive.</li>
+          </ul>
+
+          <p>
+            Key links:
+            <br><a href="https://healthneem.com">HealthNeem.com</a>
+            <br><a href="https://enter.amcpros.com/marcom/entry/healthneem-com-ai-powered-health-literacy-platform/">MarCom public entry</a>
+            <br><a href="https://www.entrepreneur.com/science-technology/how-this-startup-is-using-ai-to-bridge-the-health-literacy/501145">Entrepreneur feature</a>
+            <br><a href="https://www.newindianexpress.com/states/telangana/2025/Dec/21/from-telangana-village-to-global-ai-leader-jayachander-reddy-uses-technology-to-bridge-healthcare-gaps">New Indian Express coverage</a>
+            <br><a href="https://www.edexlive.com/news/from-telangana-village-to-global-ai-leader-jayachander-uses-technology-to-bridge-healthcare-gaps">EdexLive coverage</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="opensource">
+      <div class="container">
+        <h2 class="section-title">Open-Source AI Infrastructure Contributions</h2>
+        <p class="section-lead">
+          Contributions focused on making AI systems more cost-aware, reliable, observable, and governable in production.
+        </p>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="date">Jan 2026</div>
+            <div>
+              <strong>LlamaIndex — TokenBudgetHandler</strong>
+              <p>Added token-budget enforcement for GenAI cost governance.</p>
+              <a href="https://github.com/run-llama/llama_index/pull/20546">PR #20546</a>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="date">Feb 2026</div>
+            <div>
+              <strong>LlamaIndex — Google GenAI cleanup</strong>
+              <p>Improved cleanup reliability and error-handling behavior for Google GenAI integration.</p>
+              <a href="https://github.com/run-llama/llama_index/pull/20607">PR #20607</a>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="date">Feb 2026</div>
+            <div>
+              <strong>SkyPilot — Real-time cluster burn-rate metric</strong>
+              <p>Added Prometheus/Grafana-compatible spend visibility for active AI clusters.</p>
+              <a href="https://github.com/skypilot-org/skypilot/pull/8683">PR #8683</a>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="date">Mar 2026</div>
+            <div>
+              <strong>LiteLLM — Pricing-source traceability</strong>
+              <p>Added official source links for Azure DeepSeek and Cohere pricing metadata.</p>
+              <a href="https://github.com/BerriAI/litellm/pull/20181">PR #20181</a>
+            </div>
+          </div>
+        </div>
+
+        <p>
+          <a href="https://github.com/Jayachander123/ai-infra-open-source-contributions">
+            View full open-source evidence packet
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="container">
+        <h2 class="section-title">Research and Scholarly Work</h2>
+
+        <div class="grid two">
+          <div class="card">
+            <h3>IEEE ICAIIC Research</h3>
+            <p>
+              The Trust Tax of Privacy and Robustness: An Empirical Study Across Vision, NLP, and Tabular ML.
+            </p>
+            <a href="https://www.manuscriptlink.com/society/kics/conference/icaiic2026/programBook">ICAIIC program listing</a>
+          </div>
+
+          <div class="card">
+            <h3>IEEE Access Research</h3>
+            <p>
+              Research connected to the Retraining-Efficiency Score and AI FinOps / MLOps cost governance.
+            </p>
+            <a href="https://ieeexplore.ieee.org/document/11429693">IEEE Xplore paper</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="thought">
+      <div class="container">
+        <h2 class="section-title">Thought Leadership</h2>
+        <p class="section-lead">
+          Public writing and interviews on responsible AI, AI governance, AI audits, production MLOps,
+          AI FinOps, carbon-aware AI, on-device inference, and AI engineering.
+        </p>
+
+        <div class="grid two">
+          <div class="card">
+            <h3>Profiles and Author Pages</h3>
+            <ul>
+              <li><a href="https://www.cio.com/profile/jayachander-reddy-kandakatla/">CIO profile</a></li>
+              <li><a href="https://www.infoworld.com/profile/jayachander-reddy-kandakatla/">InfoWorld profile</a></li>
+              <li><a href="https://venturebeat.com/author/jayachander-reddy-kandakatla">VentureBeat author profile</a></li>
+              <li><a href="https://www.vktr.com/author/jayachander-reddy-kandakatla/">VKTR author profile</a></li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Featured Articles / Interviews</h3>
+            <ul>
+              <li><a href="https://medium.com/authority-magazine/guardians-of-ai-jayachander-reddy-kandakatla-of-ford-motor-credit-company-on-how-ai-leaders-are-5ecc59895034">Authority Magazine interview</a></li>
+              <li><a href="https://venturebeat.com/ai/heres-whats-slowing-down-your-ai-strategy-and-how-to-fix-it">VentureBeat — AI strategy velocity gap</a></li>
+              <li><a href="https://www.entrepreneur.com/science-technology/ai-audits-are-coming-heres-the-5-step-checklist-you/498217">Entrepreneur — AI audits checklist</a></li>
+              <li><a href="https://aijourn.com/ai-governance-atlas-a-layered-model-for-navigating-the-ai-compliance-maze/">The AI Journal — AI Governance Atlas</a></li>
+              <li><a href="https://www.cio.com/article/4113246/beyond-the-cloud-bill-the-hidden-operational-costs-of-ai-governance.html">CIO — Hidden operational costs of AI governance</a></li>
+              <li><a href="https://www.cio.com/article/4132293/the-carbon-cost-of-an-api-call.html">CIO — Carbon cost of an API call</a></li>
+              <li><a href="https://www.infoworld.com/article/4147702/the-toggle-away-efficiencies-cutting-ai-costs-inside-the-training-loop.html">InfoWorld — Cutting AI costs inside the training loop</a></li>
+              <li><a href="https://www.vktr.com/ai-technology/the-ai-accuracy-trap/">VKTR — AI Accuracy Trap</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="service">
+      <div class="container">
+        <h2 class="section-title">Professional Service, Judging, and Leadership</h2>
+
+        <div class="grid two">
+          <div class="card">
+            <h3>Publicly Verifiable Roles</h3>
+            <ul>
+              <li><a href="https://www.computer.org/volunteering/boards-and-committees/member-geographic-activities">IEEE Computer Society Area 1 & 2 Coordinator, Regions 5 & 6</a></li>
+              <li><a href="https://edas.info/web/southeastcon2026/tpc.html">IEEE SouthEastCon 2026 Technical Program Committee</a></li>
+              <li><a href="https://www.bintelligence.com/judge/jayachander-reddy-kandakatla">Business Intelligence Group judge profile</a></li>
+              <li><a href="https://blog.skypilot.co/case-studies/">SkyPilot published practitioner testimonial</a></li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Documented Service and Review Work</h3>
+            <ul>
+              <li>Presidential AI Challenge judge — state and regional assignments.</li>
+              <li>IEEE Senior Member Application Review Panel.</li>
+              <li>IEEE eLearning course reviewer.</li>
+              <li>IMCET, LACCEI, and other technical peer-review assignments.</li>
+              <li>Claro Awards judge and Business Professionals of America judge.</li>
+            </ul>
+            <p class="small">Supporting documentation available in evidence packet where public links are unavailable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="public-sector">
+      <div class="container">
+        <h2 class="section-title">Public-Sector AI Literacy and Governance</h2>
+        <p class="section-lead">
+          Contributions to AI literacy, governance, and digital inclusion through public knowledge platforms.
+        </p>
+
+        <div class="card">
+          <ul>
+            <li><a href="https://egovernance.vikaspedia.in/viewcontent/e-governance/best-practices/ensuring-trust-and-reliability-in-digital-india-a-data-provenance-mlops-framework-for-government-ai?lgn=en">Data provenance and MLOps framework for government AI</a></li>
+            <li><a href="https://education.vikaspedia.in/viewcontent/education/science-and-technology/deepfakes-and-digital-safety-a-citizen’s-guide-to-ai-scams?lgn=en">Deepfakes and digital safety guide</a></li>
+            <li><a href="https://education.vikaspedia.in/viewcontent/education/artificial-intelligence/ai-driven-security-frameworks-for-indian-rural-banking-institutions?lgn=en">AI-driven security frameworks for rural banking</a></li>
+            <li><a href="https://education.vikaspedia.in/viewcontent/education/artificial-intelligence/surviving-the-gpu-crisis-a-finops-guide-for-indian-genai-startups?lgn=en">GenAI FinOps guide for Indian startups</a></li>
+            <li><a href="https://education.vikaspedia.in/viewcontent/education/artificial-intelligence/the-end-of-the-prompt-engineer-engineering-the-next-generation-of-ai-systems?lgn=en">Engineering the next generation of AI systems</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="awards">
+      <div class="container">
+        <h2 class="section-title">Awards and Recognition</h2>
+
+        <div class="grid three">
+          <div class="card">
+            <h3>MarCom Gold Awards</h3>
+            <p>Four Gold recognitions for HealthNeem / related AI health-literacy work.</p>
+          </div>
+          <div class="card">
+            <h3>Davey Silver Award</h3>
+            <p>Silver recognition in website category for HealthNeem.</p>
+          </div>
+          <div class="card">
+            <h3>HDM Awards Silver</h3>
+            <p>Silver recognition in blogs/category evidence packet.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="media">
+      <div class="container">
+        <h2 class="section-title">Media Coverage About Jayachander</h2>
+
+        <div class="card">
+          <ul>
+            <li><a href="https://medium.com/authority-magazine/guardians-of-ai-jayachander-reddy-kandakatla-of-ford-motor-credit-company-on-how-ai-leaders-are-5ecc59895034">Authority Magazine interview</a></li>
+            <li><a href="https://www.newindianexpress.com/states/telangana/2025/Dec/21/from-telangana-village-to-global-ai-leader-jayachander-reddy-uses-technology-to-bridge-healthcare-gaps">New Indian Express feature</a></li>
+            <li><a href="https://www.edexlive.com/news/from-telangana-village-to-global-ai-leader-jayachander-uses-technology-to-bridge-healthcare-gaps">EdexLive feature</a></li>
+            <li><a href="https://www.eenadu.net/telugu-news/districts/nalgonda-narkatpally-young-man-receives-international-recognition-for-his-talent-in-ai/534/125233725">Eenadu coverage</a></li>
+            <li><a href="https://epaper.andhrajyothy.com/Nalgonda_District?eid=65&edate=20/12/2025&pgid=1262722&device=desktop&view=3">Andhra Jyothy epaper coverage</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="evidence">
+      <div class="container">
+        <h2 class="section-title">Supporting Evidence</h2>
+        <p class="section-lead">
+          Public links are provided throughout this page. Additional certificates, screenshots, judging dashboards,
+          acceptance emails, and evidence PDFs can be organized below.
+        </p>
+
+        <div class="card">
+          <p class="small">
+            Note: GitHub’s PDF preview may not render all files in-browser. If a file does not preview, use the download button.
+          </p>
+
+          <ul>
+            <li><a href="evidence/media-coverage.pdf">Media coverage evidence PDF</a></li>
+            <li><a href="evidence/healthneem-awards.pdf">HealthNeem awards evidence PDF</a></li>
+            <li><a href="evidence/ieee-research.pdf">IEEE research evidence PDF</a></li>
+            <li><a href="evidence/judging-proof.pdf">Judging and reviewer evidence PDF</a></li>
+            <li><a href="evidence/open-source-evidence.pdf">Open-source contribution evidence PDF</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Jayachander Reddy Kandakatla — AI Impact Portfolio</p>
+      <p class="small">Responsible AI • MLOps • AI FinOps • Health Literacy • Open Source • Public-sector AI Literacy</p>
+    </div>
+  </footer>
+</body>
+</html>
